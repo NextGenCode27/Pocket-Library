@@ -32,11 +32,11 @@ const LandingHeroSection = () => {
       <div className="hidden md:flex h-full w-1/2 items-center justify-center relative">
         <div className="inset-0 flex items-center justify-center">
           <div className="relative w-[400px] h-[400px] ">
-            <div className="absolute transform-3d right-10 top-10 rotate-[20deg] max-sm:hidden opacity-60">
-              <Book3D bookCoverImageUrl={BookConstants[0].bookCoverImageUrl} />
+            <div className="absolute z-0 transform-3d right-10 top-10 rotate-[20deg] max-sm:hidden opacity-60">
+              <Book3D bookCoverImageUrl={BookConstants[1].bookCoverImageUrl} />
             </div>
-            <div className="absolute transform-3d left-10 top-0">
-              <Book3D bookCoverImageUrl={BookConstants[0].bookCoverImageUrl} />
+            <div className="absolute z-0 transform-3d left-10 top-0">
+              <Book3D bookCoverImageUrl={BookConstants[1].bookCoverImageUrl} />
             </div>
           </div>
         </div>
