@@ -1,6 +1,7 @@
 import Book3D from "@/components/book/Book-3D";
 import { Button } from "@/components/ui/button";
 import { BookConstants } from "@/constants/book-constants";
+import LandingSignInModal from "./Landing-SignIn-Modal";
 
 const LandingHeroSection = () => {
   return (
@@ -28,9 +29,7 @@ const LandingHeroSection = () => {
             </span>
           </p>
           <div className="flex w-full items-start justify-start mt-4">
-            <Button variant={"default"} size={"lg"}>
-              Sign in
-            </Button>
+            <LandingSignInModal />
           </div>
         </div>
       </div>
