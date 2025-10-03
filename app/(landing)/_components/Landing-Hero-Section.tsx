@@ -4,7 +4,10 @@ import { BookConstants } from "@/constants/book-constants";
 
 const LandingHeroSection = () => {
   return (
-    <div className="flex flex-row h-screen w-full items-center mx-auto p-10">
+    <section
+      id="hero-section"
+      className="flex flex-row h-screen w-full items-center mx-auto p-10"
+    >
       <div className="flex flex-col md:flex-row h-full w-full md:w-1/2 items-center justify-center">
         <div className="flex flex-col max-w-lg h-full gap-2 items-center justify-center">
           <h3 className="text-3xl font-bold">
@@ -25,7 +28,9 @@ const LandingHeroSection = () => {
             </span>
           </p>
           <div className="flex w-full items-start justify-start mt-4">
-            <Button variant={"secondary"}>See Plans</Button>
+            <Button variant={"default"} size={"lg"}>
+              Sign in
+            </Button>
           </div>
         </div>
       </div>
@@ -41,7 +46,7 @@ const LandingHeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

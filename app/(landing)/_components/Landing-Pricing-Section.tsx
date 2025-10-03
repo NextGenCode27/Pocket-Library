@@ -4,7 +4,10 @@ import PricingConstants from "@/constants/pricing-constants";
 
 const LandingPricingSection = () => {
   return (
-    <div className="flex flex-row h-screen w-full items-center mx-auto p-10">
+    <section
+      id="pricing-section"
+      className="flex flex-row h-full md:h-screen w-full items-center mx-auto p-10"
+    >
       <div className="flex flex-col gap-6 items-center justify-center w-full">
         <div className="flex flex-col gap-2 w-lg items-center justify-center mt-20">
           <h2 className="text-3xl font-bold">Pricing Plans</h2>
@@ -18,7 +21,7 @@ const LandingPricingSection = () => {
           {PricingConstants.map((plan) => (
             <Card
               key={plan.name}
-              className="w-sm bg-primary/5 shadow-2xl p-6 rounded-md hover:bg-primary/30 transition hover:scale-105 duration-300"
+              className="w-sm bg-card shadow-2xl p-6 rounded-md transition hover:scale-105 duration-300"
             >
               <div>
                 <div className="flex items-center justify-between">
@@ -63,7 +66,7 @@ const LandingPricingSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

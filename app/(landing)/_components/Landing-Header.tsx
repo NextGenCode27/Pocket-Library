@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import LandingNavigation from "./Landing-Header-Navigation";
+import LandingHeaderNavigation from "./Landing-Header-Navigation";
 import { useEffect, useState } from "react";
 const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,17 +30,20 @@ const LandingHeader = () => {
         }`}
     >
       {/* Logo and App Title */}
-      <h3
-        aria-label="App Logo and Title"
-        className="text-xl font-semibold"
-        style={{ fontFamily: "--babas-neue" }}
-      >
-        POCKET <span className="text-primary">LIBRARY</span>
-      </h3>
+      <div className="flex items-center gap-2">
+        <img src="/books/books-stack.png" alt="" height={45} width={45} />
+        <h3
+          aria-label="App Logo and Title"
+          className="text-xl font-semibold"
+          style={{ fontFamily: "--babas-neue" }}
+        >
+          POCKET <span className="text-primary">LIBRARY</span>
+        </h3>
+      </div>
 
       {/* Navigation and Actions */}
       <div className="hidden md:flex flex-row items-center gap-10">
-        <LandingNavigation />
+        <LandingHeaderNavigation />
         <Button className={`${isScrolled ? "rounded-full" : ""}`}>
           Get Started
         </Button>

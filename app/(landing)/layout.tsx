@@ -9,9 +9,11 @@ export const metadata: Metadata = {
 
 const LandingLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main>
-      <LandingHeader />
-      {children}
+    <main className="bg-[url('/images/library-image.jpg')] min-h-screen bg-fixed">
+      <div className="bg-black/95 min-h-screen">
+        <LandingHeader />
+        {children}
+      </div>
     </main>
   );
 };

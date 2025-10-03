@@ -1,27 +1,34 @@
 import Link from "next/link";
 
 const NavigationLinks = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Home", href: "#hero-section" },
+  // { name: "Services", href: "#" },
+  { name: "Pricing", href: "#pricing-section" },
+  { name: "FAQ", href: "#FAQ-section" },
+  { name: "Contact", href: "#footer-section" },
 ];
 
-const LandingNavigation = () => {
+const LandingHeaderNavigation = () => {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <ul className="flex flex-row gap-6">
       {NavigationLinks.map((link) => (
         <li key={link.name}>
-          <Link
-            href={link.href}
+          <button
+            onClick={() => handleScroll(link.href.replace("#", ""))}
             className="text-muted-foreground hover:text-primary transition"
           >
             {link.name}
-          </Link>
+          </button>
         </li>
       ))}
     </ul>
   );
 };
 
-export default LandingNavigation;
+export default LandingHeaderNavigation;
